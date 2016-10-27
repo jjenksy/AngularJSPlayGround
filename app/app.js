@@ -1,14 +1,31 @@
-'use strict';
+/**
+ * Created by jjenkins on 10/25/2016.
+ */
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
+/**
+ * This is my main Javascript file for the web front end controller
+ */
+    //This controller module is represented as a simple JavaScript function
+// Main angular routing app
+(function() {
+    'use strict';
+    var app = angular.module("crudPage",["ngRoute"]);
 
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+    //config for app runs this when app is initially created
+    app.config(function($routeProvider){
+
+        //describe the route when user navigates to /main
+        $routeProvider.when('/main',{
+            templateUrl:"main.html",
+            controller: "MainCtlr" //determines the controller for the templateURL view
+        })//@otherwise if you dont know the url
+            .otherwise({redirectTo:"/main"})
+
+    });
+
+
+
+
+})();
+
+

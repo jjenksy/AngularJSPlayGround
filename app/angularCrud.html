@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="crudPage">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--core angular-->
+    <script src="bower_components/angular/angular.js"></script>
+    <!--angular routing-->
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <!--main app controller-->
+    <script src="app.js"></script>
+    <script src="controller/MainCtlr.js"></script>
+    <script src="services/getUserDetails.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!--directive for my routing to send the view-->
+        <div ng-view></div>
+    </div>
+</body>
+
+</html>
