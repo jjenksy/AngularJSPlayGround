@@ -29,13 +29,10 @@
                    $log.info(e);
                });
         };
-
         return {
             getUser:getUser
         };
     };
-
-
     var module = angular.module('crudPage');
     //call the factory function to create the service
     module.factory("userDetails", userDetails);
