@@ -9,6 +9,7 @@
 // Main angular routing app
 (function() {
     'use strict';
+    //add the ngRoute as a param for routing
     var app = angular.module("crudPage",["ngRoute"]);
 
     //config for app runs this when app is initially created
@@ -16,9 +17,13 @@
 
         //describe the route when user navigates to /main
         $routeProvider.when('/main',{
-            templateUrl:"main.html",
+            templateUrl:"angularTemplates/main.html",
             controller: "MainCtlr" //determines the controller for the templateURL view
-        })//@otherwise if you dont know the url
+        })
+            .when('/test',{
+                templateUrl:"angularTemplates/test.html",
+                controller: "TestCtlr" //determines the controller for the templateURL view
+            })//@otherwise if you dont know the url
             .otherwise({redirectTo:"/main"})
 
     });

@@ -13,12 +13,20 @@
     <script src="app.js"></script>
     <script src="controller/MainCtlr.js"></script>
     <script src="services/getUserDetails.js"></script>
+    <script src="controller/TestCtlr.js"></script>
+    <script src="services/httpRequester.js"></script>
 </head>
 <body>
     <div class="container">
+        <!--place a # in front of route to so angular can resolve it-->
+        <a href="#/test">Link to test route</a>
         <!--directive for my routing to send the view-->
         <div ng-view></div>
     </div>
+
+    <!--Jquery and bootstrap-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
