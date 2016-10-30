@@ -16,7 +16,11 @@
     app.config(function($routeProvider){
 
         //describe the route when user navigates to /main
-        $routeProvider.when('/main',{
+        $routeProvider
+            .when('/',{
+                templateUrl:"angularTemplates/index.html"
+            })
+            .when('/main',{
             templateUrl:"angularTemplates/main.html",
             controller: "MainCtlr" //determines the controller for the templateURL view
         })
@@ -24,7 +28,7 @@
                 templateUrl:"angularTemplates/test.html",
                 controller: "TestCtlr" //determines the controller for the templateURL view
             })//@otherwise if you dont know the url
-            .otherwise({redirectTo:"/main"})
+            .otherwise({redirectTo:"/"})
 
     });
 

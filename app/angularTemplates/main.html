@@ -1,5 +1,7 @@
 <div>
-    <div class="container">
+    <div class="page-header">
+        <h1>HTTP Main</h1>
+    </div>
         <!--method="POST"-->
         <form name="searchUser" ng-submit="search(username)">
             <div class="form-group">
@@ -23,8 +25,5 @@
         <!--ng-show looks to see if the user object is truthy meaning meanin not undefined show the table if true-->
         <!--the div is the entry point for the template add the single quotes so angular does not try and evaluate it-->
         <div ng-include="'angularTemplates/userdetails.html'" ng-show="user"></div>
-    </div>
-
-
 
 </div>

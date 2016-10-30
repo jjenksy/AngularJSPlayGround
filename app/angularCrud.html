@@ -17,12 +17,34 @@
     <script src="services/httpRequester.js"></script>
 </head>
 <body>
+        <div class="container-fluid">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Brand</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li> <a href="#/test">Link to test route</a></li>
+                        <li><a href="#/main">Link to main route</a></li>
+                    </ul>
+                </div>
+        </nav>
+        </div>
+
     <div class="container">
-        <!--place a # in front of route to so angular can resolve it-->
-        <a href="#/test">Link to test route</a>
         <!--directive for my routing to send the view-->
         <div ng-view></div>
     </div>
+
+
 
     <!--Jquery and bootstrap-->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
