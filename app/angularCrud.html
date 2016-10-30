@@ -17,8 +17,9 @@
     <script src="services/httpRequester.js"></script>
 </head>
 <body>
-        <div class="container-fluid">
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -36,13 +37,16 @@
                         <li><a href="#/main">Link to main route</a></li>
                     </ul>
                 </div>
+            </div>
         </nav>
-        </div>
+            <div class="container">
+                <div class="jumbotron">
+                <!--directive for my routing to send the view-->
+                <div ng-view></div>
+                </div>
+            </div>
 
-    <div class="container">
-        <!--directive for my routing to send the view-->
-        <div ng-view></div>
-    </div>
+
 
 
 

@@ -1,5 +1,6 @@
 /**
  * Created by jjenkins on 10/29/2016.
+ * todo look at the http resource service available from angular
  */
 (function(){
 
@@ -12,15 +13,15 @@
                     //returns http response data
                     $log.info(response.data);
                     return response.data;
-                }).catch(function(e){
+                }).catch(function(response){
                     //catch any exception thrown
-                    $log.info(e);
+                    $log.info(response.status);
                 });
         };
         return {
             getHttpRequest:getHttpRequest
         };
-        }
+        };
 
     var module = angular.module('crudPage');
     //call the factory function to create the service
