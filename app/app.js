@@ -30,6 +30,11 @@
                 controller: "TestCtlr", //determines the controller for the templateURL view
                 controllerAs:'test'
             })//@otherwise if you dont know the url
+             .when('/products',{
+            templateUrl:"angularTemplates/products.html",
+                controller: "ProductListCtrl", //determines the controller for the templateURL view
+                controllerAs:'products'
+        })//@otherwise if you dont know the url
             .otherwise({redirectTo:"/"})
 
     });
