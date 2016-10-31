@@ -22,11 +22,13 @@
             })
             .when('/main',{
             templateUrl:"angularTemplates/main.html",
-            controller: "MainCtlr" //determines the controller for the templateURL view
+            controller: "MainCtlr", //determines the controller for the templateURL vie
+                controllerAs:'main'
         })
             .when('/test',{
                 templateUrl:"angularTemplates/test.html",
-                controller: "TestCtlr" //determines the controller for the templateURL view
+                controller: "TestCtlr", //determines the controller for the templateURL view
+                controllerAs:'test'
             })//@otherwise if you dont know the url
             .otherwise({redirectTo:"/"})
 
